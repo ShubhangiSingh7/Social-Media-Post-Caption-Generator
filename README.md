@@ -29,34 +29,23 @@ An intelligent web app that generates catchy, emoji-rich social media captions b
 
 ### 1. Clone the repo
 
-bash
 git clone https://github.com/ShubhangiSingh7/Social-Media-Post-Generator.git
 
 ### 2. Install dependencies
-bash
-Copy
-Edit
+
 pip install -r requirements.txt
 
 ### 3. Add your API key
-Create a .env file in the root directory and add your Groq API key:
 
-ini
-Copy
-Edit
+Create a .env file in the root directory and add your Groq API key:
 GROQ_API_KEY = your_groq_api_key_here
 You can get your key from: https://console.groq.com
 
-▶️ Run the app
-bash
-Copy
-Edit
+###▶️ Run the app
+
 streamlit run app.py
 
-📁 File Structure
-pgsql
-Copy
-Edit
+###📁 File Structure
 
 📦social-caption-generator
  ┣ 📄app.py                 # Main Streamlit app
@@ -65,10 +54,8 @@ Edit
  ┣ 📄.env                   # API keys (not shared)
  ┗ 📄README.md
  
-🧠 Prompt Example (to LLM)
-yaml
-Copy
-Edit
+###🧠 Prompt Example (to LLM)
+
 Generate a social media caption for the platform: Instagram.
 Theme: AI startup.
 Tone: Casual.
@@ -79,17 +66,17 @@ Caption: ...
 Hashtags: ...
 Emojis: ...
 
-📌 Sample Output
-yaml
-Copy
-Edit
+
+###📌 Sample Output
+
 📝 Caption:
 Bringing AI to life, one innovation at a time 🤖✨
 
 Hashtags: #AIStartup #FutureIsNow #Innovation #TechRevolution  
 Emojis: 🤖✨🚀💼
 
-✅ To-Do / Future Plans
+###✅ To-Do / Future Plans
+
 Add Hugging Face image-to-text (BLIP-2 or ViT-GPT2)
 
 Add language translation support
