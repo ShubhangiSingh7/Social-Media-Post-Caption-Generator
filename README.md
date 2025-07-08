@@ -67,11 +67,12 @@ Emojis: ...
 
 📌 Sample Output
 
-📝 Caption:
+Caption:
 Bringing AI to life, one innovation at a time 🤖✨
-
-Hashtags: #AIStartup #FutureIsNow #Innovation #TechRevolution  
-Emojis: 🤖✨🚀💼
+Hashtags:
+#AIStartup #FutureIsNow #Innovation #TechRevolution  
+Emojis:
+🤖✨🚀💼
 
 ✅ To-Do / Future Plans
 
