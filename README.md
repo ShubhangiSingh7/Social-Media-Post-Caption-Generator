@@ -1,108 +1,99 @@
-📸 Social Media Post & Caption Generator
-An intelligent web app that generates creative social media captions based on a user-defined theme, tone, and optional image upload. It extracts text from the image (using OCR) and combines it with user input to generate engaging captions via Groq's LLaMA-4 language model.
+# 📸 Social Media Post & Caption Generator
 
-🚀 Features
-🖼️ Upload an image (optional)
+An intelligent web app that generates catchy, emoji-rich social media captions based on user-selected theme, tone, and optional image uploads. It uses **EasyOCR** to detect any text in the image and **Groq’s LLaMA-4 model** to generate high-quality captions.
 
-🔤 Extracts visible text using EasyOCR
+---
 
-🎨 Choose or enter your desired tone/mood
+## 🚀 Features
 
-📱 Platform-aware captions: Instagram, Twitter, LinkedIn, etc.
+- 📷 Upload an image (optional)
+- 🔍 Extracts text from image using EasyOCR
+- 🎯 Choose or type your own tone (Funny, Casual, Inspirational, etc.)
+- 📱 Platform-aware captions: Instagram, LinkedIn, Twitter, etc.
+- 😍 Includes emojis and relevant hashtags
+- ⚡ Real-time caption generation powered by Groq's LLaMA-4
 
-✨ Captions include emojis and hashtags
+---
 
-⚡ Powered by Groq LLaMA-4 for fast, high-quality caption generation
+## 🛠 Tech Stack
 
-🛠 Tech Stack
-Streamlit – UI framework
+- [Streamlit](https://streamlit.io/) – UI
+- [Groq](https://console.groq.com/) – Language model (LLaMA-4)
+- [EasyOCR](https://github.com/JaidedAI/EasyOCR) – Text extraction from images
+- [Python](https://www.python.org/) – Backend logic
+- [dotenv](https://pypi.org/project/python-dotenv/) – For managing API keys
 
-Groq API – For streaming LLaMA-4 caption generation
+---
 
-EasyOCR – To detect and extract text from images
+## 🔧 Setup Instructions
 
-Python – Backend logic
+### 1. Clone the repo
 
-dotenv – For API key management
-
-📦 Installation
-1. Clone the Repository
 bash
-Copy
-Edit
-git clone https://github.com/yourusername/social-caption-generator.git
-cd social-caption-generator
-2. Install Requirements
-Make sure you have Python 3.8+ installed.
+git clone https://github.com/ShubhangiSingh7/Social-Media-Post-Generator.git
 
+### 2. Install dependencies
 bash
 Copy
 Edit
 pip install -r requirements.txt
-🔐 Environment Setup
-Create a .env file in the project root:
 
-env
+### 3. Add your API key
+Create a .env file in the root directory and add your Groq API key:
+
+ini
 Copy
 Edit
-GROQ_API_KEY=your_groq_api_key
-You can get your API key from:
-👉 https://console.groq.com
+GROQ_API_KEY = your_groq_api_key_here
+You can get your key from: https://console.groq.com
 
-▶️ Run the App
+▶️ Run the app
 bash
 Copy
 Edit
 streamlit run app.py
-📁 Project Structure
-bash
+
+📁 File Structure
+pgsql
 Copy
 Edit
+
 📦social-caption-generator
- ┣ 📄app.py                    # Main Streamlit app
- ┣ 📄caption_generator.py      # Groq API integration
+ ┣ 📄app.py                 # Main Streamlit app
+ ┣ 📄caption_generator.py   # Groq API wrapper
  ┣ 📄requirements.txt
- ┣ 📄.env                      # Contains GROQ_API_KEY
+ ┣ 📄.env                   # API keys (not shared)
  ┗ 📄README.md
-🧠 How It Works
-User inputs: platform, theme, and tone
-
-Image OCR (optional): text is extracted from uploaded image
-
-A prompt is generated using the above
-
-Groq’s LLaMA-4 model generates a creative caption with emojis and hashtags
-
-Output is streamed and shown live on the UI
-
-📸 Example Prompt Sent to Groq
+ 
+🧠 Prompt Example (to LLM)
 yaml
 Copy
 Edit
 Generate a social media caption for the platform: Instagram.
 Theme: AI startup.
-Tone: Excited.
-Image shows: Launching the future of AI from a conference stage.
+Tone: Casual.
+Image shows: Launching the future of AI from a stage.
 Include emojis and relevant hashtags.
 Format like:
 Caption: ...
 Hashtags: ...
 Emojis: ...
-✨ Example Output
+
+📌 Sample Output
 yaml
 Copy
 Edit
 📝 Caption:
-Launching innovation one line of code at a time 💻🚀
+Bringing AI to life, one innovation at a time 🤖✨
 
-#AIStartup #TechRevolution #InnovateNow  
-Emojis: 💻🚀🌟🔥
-💡 Future Improvements
-Add Hugging Face image captioning (BLIP) for deeper visual understanding
+Hashtags: #AIStartup #FutureIsNow #Innovation #TechRevolution  
+Emojis: 🤖✨🚀💼
 
-Enable voice-to-caption mode
+✅ To-Do / Future Plans
+Add Hugging Face image-to-text (BLIP-2 or ViT-GPT2)
 
-Add download/share button for generated captions
+Add language translation support
 
-📜 License
-This project is licensed under the MIT License.
+Add share/export buttons
+
+Deploy to Streamlit Cloud
