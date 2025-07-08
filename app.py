@@ -1,7 +1,8 @@
 import streamlit as st
 from caption_generator import generate_streamed_caption
 from PIL import Image
-import pytesseract
+import easyocr
+import numpy as np
 
 st.set_page_config(page_title="📸 Social Media Caption Generator")
 
@@ -16,11 +17,14 @@ image_desc = ""
 if uploaded_image:
     st.image(uploaded_image, caption="Uploaded Image", use_column_width=True)
     image = Image.open(uploaded_image)
-    image_desc = pytesseract.image_to_string(image)
+    image_np = np.array(image)
+
+    reader = easyocr.Reader(['en'], gpu=False)
+    results = reader.readtext(image_np)
+    image_desc = ' '.join([text for _, text, _ in results])
 
 if st.button("Generate Caption"):
     with st.spinner("Generating..."):
-
         # Build the prompt
         prompt = f"""Generate a social media caption for the platform: {platform}.
         Theme: {theme}.
