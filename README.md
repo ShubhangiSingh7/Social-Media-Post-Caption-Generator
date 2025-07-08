@@ -37,15 +37,14 @@ pip install -r requirements.txt
 
 ### 3. Add your API key
 
-Create a .env file in the root directory and add your Groq API key:
 GROQ_API_KEY = your_groq_api_key_here
-You can get your key from: https://console.groq.com
 
-###▶️ Run the app
+
+▶️ Run the app
 
 streamlit run app.py
 
-###📁 File Structure
+📁 File Structure
 
 📦social-caption-generator
  ┣ 📄app.py                 # Main Streamlit app
@@ -54,7 +53,7 @@ streamlit run app.py
  ┣ 📄.env                   # API keys (not shared)
  ┗ 📄README.md
  
-###🧠 Prompt Example (to LLM)
+🧠 Prompt Example (to LLM)
 
 Generate a social media caption for the platform: Instagram.
 Theme: AI startup.
@@ -66,8 +65,7 @@ Caption: ...
 Hashtags: ...
 Emojis: ...
 
-
-###📌 Sample Output
+📌 Sample Output
 
 📝 Caption:
 Bringing AI to life, one innovation at a time 🤖✨
@@ -75,7 +73,7 @@ Bringing AI to life, one innovation at a time 🤖✨
 Hashtags: #AIStartup #FutureIsNow #Innovation #TechRevolution  
 Emojis: 🤖✨🚀💼
 
-###✅ To-Do / Future Plans
+✅ To-Do / Future Plans
 
 Add Hugging Face image-to-text (BLIP-2 or ViT-GPT2)
 
