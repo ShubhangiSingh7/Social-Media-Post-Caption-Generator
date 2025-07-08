@@ -4,13 +4,18 @@ from PIL import Image
 import easyocr
 import numpy as np
 
+# Page setup
 st.set_page_config(page_title="📸 Social Media Caption Generator")
+st.title("📸 Social Media Post & Caption Generator")
 
-st.title("📝 Caption Generator with Groq API + Image Upload")
+# UI Inputs
+platform = st.selectbox("Select Platform", ["Instagram", "LinkedIn", "Twitter", "Facebook", "Snapchat", "Threads"])
+tone = st.selectbox("Select Tone / Mood", ["Professional", "Funny", "Inspirational", "Casual", "Poetic", "Excited", "Trendy"])
+custom_tone = st.text_input("Or enter your own tone (optional)")
+if custom_tone:
+    tone = custom_tone
 
-platform = st.selectbox("Platform", ["Instagram", "LinkedIn", "Twitter"])
 theme = st.text_input("Theme or keyword", placeholder="e.g., AI startup, Beach Vibes")
-
 uploaded_image = st.file_uploader("Upload an image (optional)", type=['png', 'jpg', 'jpeg'])
 image_desc = ""
 
@@ -28,6 +33,7 @@ if st.button("Generate Caption"):
         # Build the prompt
         prompt = f"""Generate a social media caption for the platform: {platform}.
         Theme: {theme}.
+        Tone: {tone}.
         Image shows: {image_desc}.
         Include emojis and relevant hashtags.
         Format like:
