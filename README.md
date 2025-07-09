@@ -1,27 +1,31 @@
 # 📸 Social Media Post & Caption Generator
 
-An intelligent web app that generates catchy, emoji-rich social media captions based on user-selected theme, tone, and optional image uploads. It uses **EasyOCR** to detect any text in the image and **Groq’s LLaMA-4 model** to generate high-quality captions.
+A Streamlit web app that generates catchy, tone-aware social media captions based on:
+- Platform (Instagram, LinkedIn, etc.)
+- Theme or keywords
+- Tone/Mood (Funny, Professional, Poetic, etc.)
+- Optional image input for context (via multimodal Groq API)
 
 ---
 
 ## 🚀 Features
 
-- 📷 Upload an image (optional)
-- 🔍 Extracts text from image using EasyOCR
-- 🎯 Choose or type your own tone (Funny, Casual, Inspirational, etc.)
-- 📱 Platform-aware captions: Instagram, LinkedIn, Twitter, etc.
-- 😍 Includes emojis and relevant hashtags
-- ⚡ Real-time caption generation powered by Groq's LLaMA-4
+- 🌐 Platform-specific caption generation
+- 🎭 Tone and mood customization
+- 🖼️ Supports optional image input for better context
+- 🔤 Includes relevant emojis and hashtags
+- 🧠 Powered by Groq's `llama-4-maverick-17b-128e-instruct` model
+- ⚡ Live streamed responses using the Groq API
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
-- [Streamlit](https://streamlit.io/) – UI
-- [Groq](https://console.groq.com/) – Language model (LLaMA-4)
-- [EasyOCR](https://github.com/JaidedAI/EasyOCR) – Text extraction from images
-- [Python](https://www.python.org/) – Backend logic
-- [dotenv](https://pypi.org/project/python-dotenv/) – For managing API keys
+- [Streamlit](https://streamlit.io/) – for UI
+- [Groq API](https://console.groq.com/) – for text + image prompt generation
+- [Pillow (PIL)](https://pillow.readthedocs.io/) – for image processing
+- [Base64](https://docs.python.org/3/library/base64.html) – for image encoding
+- [python-dotenv](https://pypi.org/project/python-dotenv/) – to manage secrets
 
 ---
 
@@ -35,7 +39,7 @@ git clone https://github.com/ShubhangiSingh7/Social-Media-Post-Generator.git
 
 pip install -r requirements.txt
 
-### 3. Add your API key
+### 3. Set up your environment variables
 
 GROQ_API_KEY = your_groq_api_key_here
 
@@ -43,3 +47,7 @@ GROQ_API_KEY = your_groq_api_key_here
 ▶️ Run the app
 
 streamlit run app.py
+
+✨ Demo 
+
+link : https://social-media-post-caption-generator-9epnrxg4u3bs27jsteqgre.streamlit.app/
