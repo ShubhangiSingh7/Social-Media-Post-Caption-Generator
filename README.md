@@ -33,7 +33,7 @@ A Streamlit web app that generates catchy, tone-aware social media captions base
 
 ### 1. Clone the repo
 
-git clone https://github.com/ShubhangiSingh7/Social-Media-Post-Generator.git
+git clone https://github.com/ShubhangiSingh7/Social-Media-Post-Caption-Generator.git
 
 ### 2. Install dependencies
 
