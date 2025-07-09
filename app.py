@@ -1,7 +1,6 @@
 import streamlit as st
 from caption_generator import generate_streamed_caption_with_image
 from PIL import Image
-import numpy as np
 from dotenv import load_dotenv
 
 # Load environment variables
